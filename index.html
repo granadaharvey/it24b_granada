@@ -8,3 +8,35 @@
     
 </body>
 </html></h1>
+
+
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    displayInfo() {
+        return `Name: ${this.name}, Age: ${this.age}`;
+    }
+
+    isAdult() {
+        return this.age >= 18;
+    }
+
+    haveBirthday() {
+        this.age += 1;
+        return `Happy Birthday, ${this.name}! You are now ${this.age} years old.`;
+    }
+}
+
+const person1 = new Person("Harvey", 18);
+const person2 = new Person("Aj", 17);
+
+console.log(person1.displayInfo()); 
+console.log(person2.displayInfo());  
+
+console.log(`Harvey is an adult: ${person1.isAdult()}`); 
+console.log(`Aj is an adult: ${person2.isAdult()}`);    
+console.log(person1.haveBirthday());  
+console.log(person2.haveBirthday()); 
